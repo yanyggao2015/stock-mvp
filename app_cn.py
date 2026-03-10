@@ -5,6 +5,9 @@ import pandas as pd
 import streamlit as st
 
 from src.journal import add_trade, load_journal, close_trade
+from src.journal import init_db
+
+init_db()
 
 st.set_page_config(page_title="个人投资研究台", layout="wide")
 st.title("个人投资研究台")
