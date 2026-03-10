@@ -5,6 +5,27 @@ import os
 
 DB_PATH = os.path.join("/tmp", "journal.sqlite")
 
+def init_db():
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS trade_journal (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        trade_date TEXT,
+        ticker TEXT,
+        side TEXT,
+        qty REAL,
+        entry_price REAL,
+        exit_price REAL,
+        exit_date TEXT,
+        notes TEXT
+    )
+    """)
+
+    con.commit()
+    con.close()
+
 
 def add_trade(row: dict):
     con = sqlite3.connect(DB_PATH)
