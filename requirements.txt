@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+yfinance
+backtrader
+requests
+python-dotenv
+streamlit
