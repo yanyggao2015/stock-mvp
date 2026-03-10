@@ -1,7 +1,9 @@
 import sqlite3
 import pandas as pd
 
-DB_PATH = "data/market.sqlite"
+import os
+
+DB_PATH = os.path.join("/tmp", "journal.sqlite")
 
 
 def add_trade(row: dict):
