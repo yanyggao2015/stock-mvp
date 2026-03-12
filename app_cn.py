@@ -10,7 +10,7 @@ from src.journal import init_db
 init_db()
 
 st.set_page_config(page_title="个人投资研究台", layout="wide")
-st.title("个人投资研究台")
+st.title("个人投资研究平台")
 st.caption("适合手动交易者的本地投资辅助系统：看股票、做计划、记交易、做复盘。")
 
 
